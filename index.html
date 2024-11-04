@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Taxi Club</title>
+
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section" style="background-color: black;">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logonuevo.png" alt="Logo" class="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html" style="background-color: black; color: white;">INICIO <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html" style="background-color: black; color: white;">NOSOTROS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html" style="background-color: black; color: white;">NUESTROS SERVICIOS</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <script>
+      document.querySelector('.navbar-toggler').addEventListener('click', function() {
+        const nav = document.querySelector('.navbar-nav');
+        nav.classList.toggle('show'); // Alternar la clase 'show' para mostrar/ocultar el menú
+      });
+    </script>
+        
+    
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section">
+      <div class="banner">
+        <!-- Imagen para Desktop -->
+        <img src="images/portada_1nuevo.jpg" alt="" class="desktop-banner">
+    
+        <!-- Imagen para Mobile -->
+        <img src="images/portada_mobile.jpg" alt="" class="mobile-banner">
+    
+        <div class="slider_form">
+          <form id="bookingForm">
+            <div class="btm_input">
+              <button type="submit" style="font-weight: bold;">Obtener tu taxi ahora</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+  <script>
+      document.getElementById('bookingForm').addEventListener('submit', function (event) {
+          event.preventDefault(); // Evita el comportamiento por defecto del formulario
+  
+          // Mensaje a enviar
+          const mensaje = `Hola! quiero agendar un taxi `;
+          const numeroWhatsApp = '+51981138013'; // Cambia esto a tu número de WhatsApp
+          const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+  
+          // Redirecciona a la URL de WhatsApp
+          window.open(url, '_blank');
+      });
+  </script>
+  
+    <!-- end slider section -->
+  </div>
+
+  
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding" style="background-color: #F5F5F5;">
+    <div class="container">
+      <div class="heading_container">
+        <h2 style="font-weight: bold;">
+          Nuestros <span style="background-color: #F7C621;">Servicios</span>
+        </h2>
+        
+      </div>
+      <div class="service_container_2">
+        <div class="box_2">
+            <div class="img-box_2">
+                <img src="images/traslados.png" alt="">
+            </div>
+            <div class="detail-box_2">
+                <h5 style="font-weight: bold;">Transporte ejecutivo</h5>
+                <p>Te recogemos desde cualquier punto de Lima y te llevamos hacia todos los destinos las 24 horas.</p>
+                <form id="enviar1">
+                  <button type="submit" class="quote-btn_2">Cotizar</button>
+                </form>
+            </div>
+        </div>
+        <div class="box_2">
+            <div class="img-box_2">
+                <img src="images/courier.png" alt="">
+            </div>
+            <div class="detail-box_2">
+                <h5 style="font-weight: bold;">Traslados al aeropuerto</h5>
+                <p>Brindamos servicios de recojo desde cualquier destino las 24 horas.</p>
+                <form id="enviar1">
+                  <button type="submit" class="quote-btn_2">Cotizar</button>
+                </form>
+            </div>
+        </div>
+        <div class="box_2">
+            <div class="img-box_2">
+                <img src="images/corporativos.png" alt="">
+            </div>
+            <div class="detail-box_2">
+                <h5 style="font-weight: bold;">Courier</h5>
+                <p>Garantizamos envíos puntuales y seguros en Lima, con atención personalizada en cada entrega.</p>
+                <form id="enviar1">
+                  <button type="submit" class="quote-btn_2">Cotizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+      document.getElementById('enviar1').addEventListener('submit', function (event) {
+          event.preventDefault(); // Evita el comportamiento por defecto del formulario
+  
+          // Mensaje a enviar
+          const mensaje = `Hola! quiero agendar un taxi `;
+          const numeroWhatsApp = '+51981138013'; // Cambia esto a tu número de WhatsApp
+          const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
+  
+          // Redirecciona a la URL de WhatsApp
+          window.open(url, '_blank');
+      });
+  </script>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+<!-- about section -->
+
+<section class="about_section layout_padding">
+  <div class="container-fluid">
+    <div class="slider-content-001">
+      <div class="slider-item-001 active-001">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 offset-lg-2 offset-md-1">
+            <div class="detail-box">
+              <h2 style="font-weight: bold;">
+              Taxi <span style="background-color: #F7C621; ">Ejecutivo</span>
+              </h2>
+              <p>
+                Ideal para traslados urbanos rápidos y eficientes, este vehículo compacto ofrece un viaje ágil y cómodo. Su excelente rendimiento de combustible lo convierte en una opción económica, perfecta para viajes cortos y seguros por la ciudad.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box" style="width: 600px;">
+              <img src="images/carro-transformed.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-item-001">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 offset-lg-2 offset-md-1">
+            <div class="detail-box">
+              <h2 style="font-weight: bold;">
+                Camioneta <span style="background-color: #F7C621; ">SUV</span>
+              </h2>
+              <p>
+                Diseñada para proporcionar un amplio espacio y comodidad, esta camioneta es perfecta para viajes familiares o grupos. Con capacidad para transportar más pasajeros y equipaje, es la opción ideal para explorar la zona de Chosica y disfrutar de excursiones a clubes y casas de campo.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box" style="width: 600px;">
+              <img src="images/camioneta3.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-item-001 ">
+        <div class="row">
+          <div class="col-lg-4 col-md-5 offset-lg-2 offset-md-1">
+            <div class="detail-box">
+              <h2 style="font-weight: bold;">
+                Vans <span style="background-color: #F7C621; ">Sprinter</span>
+              </h2>
+              <p>
+                Perfecta para traslados grupales y eventos especiales, esta van ofrece un espacio interior amplio y asientos ergonómicos. Ideal para bodas, reuniones o excursiones, asegura un viaje cómodo y seguro para todos los pasajeros, permitiendo disfrutar del trayecto sin preocupaciones.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box" style="width: 600px;">
+              <img src="images/van.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="slider-nav-001 prev-001">&lt;</button>
+    <button class="slider-nav-001 next-001">&gt;</button>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slider-item-001');
+    const prevButton = document.querySelector('.prev-001');
+    const nextButton = document.querySelector('.next-001');
+    let currentSlide = 0;
+  
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active-001');
+      slides[index].classList.add('active-001');
+      currentSlide = index;
+    }
+  
+    function nextSlide() {
+      let nextIndex = (currentSlide + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+  
+    function prevSlide() {
+      let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prevIndex);
+    }
+  
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+  
+    setInterval(nextSlide, 5000); // Cambia de slide cada 5 segundos
+  });
+  </script>
+<!-- end about section -->
+
+ <!-- client section -->
+
+ <section class="client_section layout_padding-bottom">
+  <div class="container">
+    <div class="heading_container">
+      <h2 style="font-weight: bold;">
+        Clientes <span style="background-color: #F7C621; ">Satisfechos</span>
+      </h2>
+    </div>
+    <div class="client_container">
+      <div class="carousel-wrap ">
+        <div class="owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box1">
+                <img src="images/cliente_4 (2).jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h3>
+                  Rosangela Espinoza
+                </h3>
+                <p>
+                  En estas epocas del año es dificil encontrar un servicio de taxi que sea puntual, seguro y profesional. Es
+                  por eso que mis amigos de Taxi Club, siempre seran mi primera opción favorita con tarifas muy accesibles y
+                  conductores A1 hacen que tu experiencia de viaje sea la mejor.                </p>
+                <img src="images/quote.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box1">
+                <img src="images/cliente_3.jpg" alt="">
+               </div>
+              <div class="detail-box">
+                <h3>
+                  Shirley Arica
+                </h3>
+                <p>
+                  Vengo a recomendarles lo mejor, Henry mi amigo de taxi Club Chosica para toda la gente que quiera venir a
+                  conocer los clubs de Chosica, Chaclacayo, tambien trabajan en Lima, en el Sur , en todos lados y lo mejor
+                  es que cuentan con todos los servicios que nos podamos imaginar.                </p>
+                <img src="images/quote.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="box">
+              <div class="img-box1">
+                <img src="images/cliente_7 (2).jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h3>
+                  Romina Gachoy
+                </h3>
+                <p>
+                  Hoy nos vamos de excursion familiar, siempre con Taxi Club Chosica que cuenta con nuestra total confianza
+                  de mi amigo Henry que nos lleva a todos lados y lo mejor de todo es que los carros son hermosos, amplios
+                  con todo el confort y lo mas importante es que estoy viajando segura. </p>
+                <img src="images/quote.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="box">
+              <div class="img-box1">
+                <img src="images/clientenuevo.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h3>
+                  Olenka Zimmermann
+                </h3>
+                <p>
+                  Hola! Recomiendo a la empresa de Taxi Club Chosica de mi amigo Henry, ya que puedo ir a cualquier lado de forma segura y tranquila , pero siempre llego puntual. </p>
+                <img src="images/quote.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="box">
+              <div class="img-box1">
+                <img src="images/xoana.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h3>
+                  Xoana Gonzales
+                </h3>
+                <p>
+                  Muchas gracias a mi amigo Henry por traerme a este Club. Esto es lo maximo, super seguro, buenos precios y lo mejor de todo es confiable ya que no importa el horario , ellos siempre estan trabajando.</p>
+                <img src="images/quote.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="box">
+              <div class="img-box1">
+                <img src="images/gisela.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h3>
+                  Gisela Ponce de Leon
+                </h3>
+                <p>
+                 Quiero darles una recomendacion, si quieren tener untaxi seguro, con todos los protocolos y te llevan con toda seguridad a cualquier ciudad, por eso lo recomiendo muchisimo ya que dice en el nombre dice Chosica porque van hasta allá pero van a todos lados. </p>
+                <img src="images/quote.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end client section -->
+
+
+
+
+  <!-- why section -->
+
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2 style="font-weight: bold;">
+          ¿Porque confiar en <span style="background-color: #F7C621; ">nosotros?</span>
+        </h2>
+      </div>
+      <div class="why_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="images/delivery-man-white.png" alt="" class="img-1">
+            <img src="images/delivery-man-black.png" alt="" class="img-2">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Mejores conductores
+            </h5>
+            <p>
+              Somos conductores profesionales remisse, estamos  capacitados para brindarte el mejor servicio A1 garantizando tu total seguridad en cada trayecto.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/shield-white.png" alt="" class="img-1">
+            <img src="images/shield-black.png" alt="" class="img-2">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Seguridad y confianza
+            </h5>
+            <p>
+              Nuestra trayectoria de mas de 15 años brindando servicios corporativos a diferentes instituciones , empresas publicas y privadas, asi como clientes particulares. Respaldan nuestro trabajo de ser simbolo de garantía y confianza.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/repairing-service-white.png" alt="" class="img-1">
+            <img src="images/repairing-service-black.png" alt="" class="img-2">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Atención 24/7
+            </h5>
+            <p>
+              Estamos a tu disposición las 24 horas del día, siempre listos para atenderte. Con un enfoque en la rapidez y eficiencia, nuestro equipo se asegura de que tus necesidades sean atendidas con la máxima prioridad y dedicación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+  <!-- info section -->
+
+  <section class="info_section  layout_padding2-bottom" style="padding-top: 10px;">
+    <div class="container">
+      <div class="box">
+
+        <div class="info_social">
+          <div> 
+            <a href="https://api.whatsapp.com/send?phone=51981138013">
+              <img src="images/logo1_2.png" alt="">
+            </a>
+          </div>
+          <div> 
+            <a href="https://www.tiktok.com/@taxiclubchosica">
+              <img src="images/tiktok.png" alt="">
+            </a>
+          </div>
+          <div> 
+            <a href="https://www.instagram.com/taxiclubchosica/">
+              <img src="images/instagram.png" alt="">
+            </a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/TaxiClubapp/">
+              <img src="images/facebook.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <div class="container">
+      <p>
+        &copy; 2024
+        <a href="">Innovation KC</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+
+
+  <!-- owl carousel script -->
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      navText: [],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 2
+        }
+      }
+    });
+  </script>
+  <!-- end owl carousel script -->
+
+</body>
+
+</html>
